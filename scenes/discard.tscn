@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1h412docxujn"]
+
+[ext_resource type="Script" path="res://scripts/discard.gd" id="1_o2ao0"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_tkbrs"]
+
+[node name="Discard" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 31.0
+offset_bottom = 40.0
+script = ExtResource("1_o2ao0")
+
+[node name="DiscardCard" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 31.0
+offset_bottom = 40.0
+texture = SubResource("CanvasTexture_tkbrs")
