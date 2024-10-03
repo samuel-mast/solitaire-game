@@ -1,15 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://x6vljyfb0kss"]
+[gd_scene load_steps=3 format=3 uid="uid://x6vljyfb0kss"]
 
-[ext_resource type="Texture2D" uid="uid://wtxwcs7ax4p6" path="res://assets/sprites/cards/C2.png" id="1_6nvsd"]
+[ext_resource type="Script" path="res://scripts/card.gd" id="1_2cv3s"]
+[ext_resource type="Texture2D" uid="uid://vtfgk1il44rx" path="res://assets/sprites/cards/Backs/back_0.png" id="2_apvv5"]
 
 [node name="Card" type="Control"]
 layout_mode = 3
+anchors_preset = 0
 offset_right = 31.0
 offset_bottom = 40.0
+script = ExtResource("1_2cv3s")
 
 [node name="CardTexture" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 31.0
 offset_bottom = 40.0
-texture = ExtResource("1_6nvsd")
+texture = ExtResource("2_apvv5")
 stretch_mode = 4
