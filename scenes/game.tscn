@@ -1,35 +1,87 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjej3v5cyvccq"]
-
-[ext_resource type="PackedScene" uid="uid://x6vljyfb0kss" path="res://scenes/card.tscn" id="1_tidhj"]
-[ext_resource type="PackedScene" uid="uid://dh60n1of7isnq" path="res://scenes/deck.tscn" id="2_k40ll"]
-[ext_resource type="PackedScene" uid="uid://b1h412docxujn" path="res://scenes/discard.tscn" id="3_tcow2"]
+[gd_scene format=3 uid="uid://b6t4n5aq43jav"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1, 8)
-zoom = Vector2(4, 4)
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 196.0
+theme_override_constants/separation = 100
 
-[node name="Card" parent="." instance=ExtResource("1_tidhj")]
-anchors_preset = 0
-offset_left = 24.0
-offset_top = 16.0
-offset_right = 55.0
-offset_bottom = 56.0
+[node name="TopHBox" type="HBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 20
 
-[node name="Discard" parent="." instance=ExtResource("3_tcow2")]
-offset_left = -80.0
-offset_top = -64.0
-offset_right = -49.0
-offset_bottom = -24.0
+[node name="Panel" type="Panel" parent="HBoxContainer/TopHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
 
-[node name="Deck" parent="." instance=ExtResource("2_k40ll")]
-anchors_preset = 0
-offset_left = -128.0
-offset_top = -64.0
-offset_right = -97.0
-offset_bottom = -24.0
-grow_horizontal = 1
-grow_vertical = 1
+[node name="Panel2" type="Panel" parent="HBoxContainer/TopHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TopHBox2" type="HBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="Panel" type="Panel" parent="HBoxContainer/TopHBox2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/TopHBox2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/TopHBox2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/TopHBox2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 262.0
+offset_right = 1154.0
+offset_bottom = 518.0
+theme_override_constants/separation = 20
+
+[node name="Panel" type="Panel" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel2" type="Panel" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel6" type="Panel" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel7" type="Panel" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
