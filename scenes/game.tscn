@@ -1,87 +1,16 @@
-[gd_scene format=3 uid="uid://b6t4n5aq43jav"]
+[gd_scene load_steps=3 format=3 uid="uid://b6t4n5aq43jav"]
 
-[node name="Game" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[ext_resource type="PackedScene" uid="uid://jfe72wf2jdsw" path="res://scenes/card.tscn" id="1_fmeqk"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_y2e01"]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 1155.0
-offset_bottom = 196.0
-theme_override_constants/separation = 100
+[node name="Game" type="Node2D"]
+script = ExtResource("1_y2e01")
 
-[node name="TopHBox" type="HBoxContainer" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/separation = 20
+[node name="Card" parent="." instance=ExtResource("1_fmeqk")]
+position = Vector2(-25, -41)
 
-[node name="Panel" type="Panel" parent="HBoxContainer/TopHBox"]
-layout_mode = 2
-size_flags_horizontal = 3
+[node name="Card2" parent="." instance=ExtResource("1_fmeqk")]
+position = Vector2(-83, -39)
 
-[node name="Panel2" type="Panel" parent="HBoxContainer/TopHBox"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="TopHBox2" type="HBoxContainer" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/separation = 20
-
-[node name="Panel" type="Panel" parent="HBoxContainer/TopHBox2"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Panel2" type="Panel" parent="HBoxContainer/TopHBox2"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Panel3" type="Panel" parent="HBoxContainer/TopHBox2"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Panel4" type="Panel" parent="HBoxContainer/TopHBox2"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 262.0
-offset_right = 1154.0
-offset_bottom = 518.0
-theme_override_constants/separation = 20
-
-[node name="Panel" type="Panel" parent="HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Panel2" type="Panel" parent="HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Panel3" type="Panel" parent="HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Panel4" type="Panel" parent="HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Panel5" type="Panel" parent="HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Panel6" type="Panel" parent="HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Panel7" type="Panel" parent="HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
